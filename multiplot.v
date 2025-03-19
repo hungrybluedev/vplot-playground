@@ -1,6 +1,6 @@
 module main
 
-import vplot 
+import vplot
 import os
 import math
 
@@ -21,7 +21,7 @@ fn signal() ([]f64, []f64) {
 
 	for i in 1 .. 1000 {
 		x << f64(i) * math.pi
-		s << f64(math.pi * math.log(2*i))
+		s << f64(math.pi * math.log(2 * i))
 	}
 	return x, s
 }
@@ -32,14 +32,12 @@ fn main() {
 	x1, y1 := signal()
 	x2, y2 := data()
 
-	plotter.enable_multiplot(
-		vplot.Multiplotter{
-			rows: 2
-			cols: 2
-			title: 'Multiplot example'
-			stack: vplot.Stack.rows_first
-		}
-	)
+	plotter.enable_multiplot(vplot.Multiplotter{
+		rows:  2
+		cols:  2
+		title: 'Multiplot example'
+		stack: vplot.Stack.rows_first
+	})
 
 	$if false {
 		plotter.command('plot sin(x) ')

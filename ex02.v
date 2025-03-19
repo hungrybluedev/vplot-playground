@@ -18,5 +18,4 @@ fn main() {
 	os.input('Press any keys to continue...')
 
 	p1.close()
-
 }

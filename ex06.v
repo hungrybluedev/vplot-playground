@@ -22,9 +22,7 @@ fn main() {
 
 	p1.label_x('X index')
 	p1.label_y('y=log(x)')
-	p1.plot(y, 'Test X only') or {
-		println('ERROR: ${err.msg()}')
-	}
+	p1.plot(y, 'Test X only') or { println('ERROR: ${err.msg()}') }
 	os.input('Press any key to continue')
 
 	p1.close()

@@ -11,7 +11,7 @@ const npoints = 50
 fn wait() {
 	// time.sleep(sleep_length)
 	rc := os.input('Press [ENTER] to continue...')
-	println('$rc is pressed.')
+	println('${rc} is pressed.')
 }
 
 fn main() {

@@ -19,16 +19,14 @@ fn main() {
 	// x, y := sig()
 
 	mut p1 := vplot.PlotSession{
-		title: 'Test Plot Session'
-		style: vplot.style_impulses
+		title:   'Test Plot Session'
+		style:   vplot.style_impulses
 		label_x: 'x = index i'
 		label_y: 'y=log(x)'
-		x: [f64(0), 1.0, 2.0, 3.0]
-		y: [f64(1), 1.0, 0.0, 1.0]
+		x:       [f64(0), 1.0, 2.0, 3.0]
+		y:       [f64(1), 1.0, 0.0, 1.0]
 	}
 
-	vplot.plotter(p1) or {
-		println('ERROR: ${err.msg()}')
-	}
+	vplot.plotter(p1) or { println('ERROR: ${err.msg()}') }
 	os.input('Press any key to continue...')
 }

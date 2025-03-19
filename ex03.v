@@ -20,9 +20,7 @@ fn main() {
 
 	mut p1 := vplot.new()
 
-	p1.plot2([]f64{}, y, 'Test Y only') or {
-		println('ERROR: ${err.msg()}')
-	}
+	p1.plot2([]f64{}, y, 'Test Y only') or { println('ERROR: ${err.msg()}') }
 	os.input('Press any key to continue')
 
 	p1.close()
